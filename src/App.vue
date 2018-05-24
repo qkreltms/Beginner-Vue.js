@@ -7,6 +7,7 @@
 <script>
 import sub1 from "./components/sub1";
 
+//props로 JSON보내기 시험중
 export default {
   name: "App",
   components: {
