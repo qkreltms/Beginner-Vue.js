@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    name: "sub1",
+    name: 'sub1',
     props: ['exampleProp'],
     data() {
       return {

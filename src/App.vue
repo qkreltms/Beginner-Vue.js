@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <sub1 :exampleProp= voca />
+    <sub1 :exampleProp= voca v-model= voca />
     <sub2></sub2>
   </div>
 </template>
@@ -17,8 +17,10 @@ export default {
   eventBus,
   name: "App",
   mounted: function() {
+    console.log(this.voca)
     eventBus.$on('testEvent', function(value) {
-      console.log("test", value)
+      this.voca = value
+      console.log(this.voca)
     })
   },
   components: {
@@ -29,9 +31,7 @@ export default {
     return {
       message: '',
       voca: [
-        {"e" :"happy1", "k": "행복1"},
-        {"e" :"happy2", "k": "행복2"},
-        {"e" :"happy3", "k": "행복3"}
+        {"e" :"happy1", "k": "행복1"}
       ]
     }
   }
