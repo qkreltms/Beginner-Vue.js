@@ -1,7 +1,7 @@
 <template>
     <div>
         sub2
-        <button v-on:click= "sendData">click</button>
+        <button v-model= voca v-on:click= "sendData">click</button>
     </div>
 </template>
 
